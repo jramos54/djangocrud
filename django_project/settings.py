@@ -20,13 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 
 SECRET_KEY = os.environ['mascota']
 #SECRET_KEY = os.getenv('SECRET_KEY')
-=======
-SECRET_KEY = os.getenv('SECRET_KEY')
->>>>>>> 64221de697224a52630851710915ad83edd0d89b
+
 
 if SECRET_KEY is None:
   print("Please setup a SECRET_KEY in the Secrets (Environment variables) tab. See README.md for more.")
@@ -47,10 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-  'customers.apps.CustomersConfig',
-=======
->>>>>>> 64221de697224a52630851710915ad83edd0d89b
+    'customers.apps.CustomersConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -68,11 +63,9 @@ ROOT_URLCONF = 'django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
+
         'DIRS': [BASE_DIR/'templates'],
-=======
-        'DIRS': [],
->>>>>>> 64221de697224a52630851710915ad83edd0d89b
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

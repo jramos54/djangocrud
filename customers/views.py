@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import customers
+from .forms import nuevoclienteform
 
 # Create your views here.
 
@@ -20,4 +21,5 @@ def clientes(request):
 def nuevocliente(request):
   page=loader.get_template('customers/newcustomer.html')
   context={}
+  context['form']=nuevoclienteform
   return HttpResponse(page.render(context,request))
