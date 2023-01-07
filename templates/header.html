@@ -9,8 +9,9 @@
       
       login
       <a href="{% url 'clientes' %}">Clientes</a>
-      Pagos
+      <a href="{% url 'payments' %}">Pagos</a>
       <a href="{% url 'nuevocliente' %}">nuevo cliente</a>
+      <a href="{% url 'newpayment' %}">Nuevo Pago</a>
       {% block content%}
       {% endblock %}
     </div>

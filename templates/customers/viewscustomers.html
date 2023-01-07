@@ -10,15 +10,13 @@
       Agregar nuevo Cliente
     </div>
     <h2>Listado de Clientes</h2>
-    <!---
+    
     <ul>
       
       {% for client in clients %}
-      <li>{{client.id_customer}}</li>
+      <li>{{client.id_customer}} {{client.nombre_cliente}} {{client.apellido_cliente}}</li>
       {% endfor %}
     </ul>
-    -->
-    {{ tipo }}
     
     {%endblock%}
   </body>

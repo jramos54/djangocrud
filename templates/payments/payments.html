@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <header>
+
+    </header>
+    <body>
+        {% extends 'header.html' %}
+        {% block content %}
+        <h1>Listado de pagos</h1>
+        <table>
+            <tr>
+            <th>id Pago</th>
+            <th>Fecha pago</th>
+            <th>id Cliente</th>
+            <th>Producto</th>
+            <th>Pago</th>
+            </tr>
+            {% for pago in pagos %}
+            <tr>
+                <td>{{pago.id_pago}}</td>
+                <td>{{pago.fecha_pago}}</td>
+                <td>{{pago.id_cliente}}
+                    {% for i in objetos%}
+                    {{i.customers.get.id_cliente}}
+                    {% endfor %}
+                </td>
+                <td>{{pago.producto}}</td>
+                <td>{{pago.cantidad_pago}}</td>
+            </tr>
+            {%endfor%}
+
+        </table>
+        
+        {%endblock%}
+    </body>
+</html>

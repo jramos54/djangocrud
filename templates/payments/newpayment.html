@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <header>
+
+    </header>
+    <body>
+        {%extends 'header.html'%}
+        {%block content%}
+        <h2>Nuevo Pago</h2>
+        <form action="" method="post">
+            {% csrf_token%}
+            {{form}}
+            <input type="submit" value="agregar">
+        </form>
+        {%endblock%}
+    </body>
+</html>

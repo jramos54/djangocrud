@@ -21,8 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ['mascota']
+#SECRET_KEY = os.environ['mascota']
 #SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'yffb1+6s748o0%1!zq(p%cqsgt_)1mrc_hyycvi^nczs#n==mw'
 
 
 if SECRET_KEY is None:
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'customers.apps.CustomersConfig',
+    'payments.apps.PaymentsConfig',
 
 ]
 
