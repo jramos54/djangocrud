@@ -4,10 +4,10 @@ from customers.models import customers
 
 class payments(models.Model):
     id_pago=models.BigAutoField(primary_key=True)
-    cantidad_pago=models.TextField(max_length=100)
+    cantidad_pago=models.TextField(max_length=10)
     id_cliente=models.ForeignKey(customers,on_delete=models.CASCADE)
-    producto=models.TextField(max_length=300)
-    cantidad_producto=models.TextField(max_length=100)
+    producto=models.TextField(max_length=30)
+    cantidad_producto=models.TextField(max_length=10)
     fecha_pago=models.DateField(auto_now_add=True)
 
     @property

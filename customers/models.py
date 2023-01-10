@@ -4,8 +4,8 @@ from django.db import models
 
 class customers(models.Model):
   id_customer=models.BigAutoField(primary_key=True)
-  nombre_cliente=models.TextField(max_length=50)
-  apellido_cliente=models.TextField(max_length=50)
+  nombre_cliente=models.TextField(max_length=10)
+  apellido_cliente=models.TextField(max_length=10)
   correo=models.EmailField(unique=True)
   class Meta:
     unique_together=['nombre_cliente','apellido_cliente','correo']
